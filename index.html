@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自然派四柱推命｜実践鑑定ライブ - 命式を景色に変える学び</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Noto+Serif+JP:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #2d5a27;
+            --accent-orange: #e67e22;
+            --bg-cream: #fafafa;
+            --youtube-red: #FF0000;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: var(--bg-cream);
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        .serif {
+            font-family: 'Noto Serif JP', serif;
+        }
+
+        .text-green {
+            color: var(--primary-green);
+        }
+
+        .bg-green {
+            background-color: var(--primary-green);
+        }
+
+        .text-orange {
+            color: var(--accent-orange);
+        }
+
+        .bg-orange {
+            background-color: var(--accent-orange);
+        }
+
+        .wood-pattern {
+            background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .float-anim {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .btn-hover {
+            transition: all 0.3s ease;
+        }
+
+        .btn-hover:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(230, 126, 34, 0.3);
+        }
+
+        .live-indicator {
+            background: var(--youtube-red);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.6;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-green tracking-tighter serif">ふちLABO.</div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#problem" class="hover:text-orange transition">悩み</a>
+                <a href="#solution" class="hover:text-orange transition">解決策</a>
+                <a href="#product" class="hover:text-orange transition">ライブ配信</a>
+                <a href="#profile" class="hover:text-orange transition">講師紹介</a>
+            </div>
+            <a href="#cta" class="bg-orange text-white px-5 py-2 rounded-full text-sm font-bold btn-hover">ライブに参加</a>
+        </div>
+    </nav>
+
+    <!-- 1. First View (Hero Section with Microphone Image) -->
+    <section class="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden bg-white wood-pattern">
+        <div class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                <path fill="#2d5a27"
+                    d="M40,-64C52.1,-56.3,62.5,-46.1,69.5,-34.1C76.5,-22.1,80.1,-8.3,78.2,4.8C76.2,17.9,68.7,30.3,59.3,41.1C49.9,51.9,38.6,61.1,25.8,66.1C13.1,71.1,-1.2,71.8,-15.1,68.4C-29,65,-42.4,57.5,-52.8,46.7C-63.1,35.9,-70.3,21.8,-73.4,6.7C-76.4,-8.3,-75.4,-24.4,-67.6,-37.2C-59.9,-50,-45.5,-59.5,-31.2,-66.1C-16.9,-72.7,-2.6,-76.4,10.2,-75.5C23,-74.6,33.1,-69.1,40,-64Z"
+                    transform="translate(100 100)" />
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1">
+                    <div
+                        class="inline-flex items-center px-4 py-2 bg-red-50 text-red-600 rounded-lg text-sm font-bold mb-6 border border-red-100 shadow-sm">
+                        <span class="live-indicator w-2 h-2 rounded-full mr-2"></span>
+                        WEEKLY YOUTUBE LIVE
+                    </div>
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl leading-tight mb-8 serif text-green">
+                        あなたの<br>
+                        <span class="text-orange">四柱推命観が変わる。</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-600 mb-10 leading-relaxed border-l-4 border-green/20 pl-6">
+                        マニュアルの暗記、キーワードの羅列から卒業。<br>
+                        一瞬で「景色」を読み解くプロの視点を、<br class="hidden sm:block">
+                        ノーカットの生配信でインストールする。
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#"
+                            class="bg-orange text-white px-10 py-5 rounded-2xl text-lg font-bold text-center btn-hover shadow-xl flex items-center justify-center">
+                            <svg class="w-6 h-6 mr-3 fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
+                            </svg>
+                            ライブ視聴予約する
+                        </a>
+                        <div class="flex flex-col justify-center px-4">
+                            <p class="text-sm font-bold text-gray-400">NEXT LIVE:</p>
+                            <p class="text-green font-bold">毎週土曜 21:00〜</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-1 lg:order-2 relative">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl border-[12px] border-white float-anim">
+                        <!-- マイクの画像 -->
+                        <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&q=80&w=1200"
+                            alt="ライブ配信機材" class="w-full h-[500px] object-cover">
+
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none">
+                        </div>
+                        <div class="absolute top-4 left-4 flex space-x-2">
+                            <span
+                                class="bg-red-600 text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-widest">LIVE</span>
+                            <span
+                                class="bg-black/50 text-white text-[10px] font-bold px-2 py-1 rounded backdrop-blur-md flex items-center">
+                                <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+                                    <path fill-rule="evenodd"
+                                        d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                184
+                            </span>
+                        </div>
+                        <div class="absolute bottom-6 left-6 right-6 text-white text-center">
+                            <p class="text-xs font-bold opacity-80 mb-1 tracking-widest uppercase">Real-time Nature
+                                Reading</p>
+                            <p class="text-2xl serif font-bold">命式を景色に、人生を物語に。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Problem Section -->
+    <section id="problem" class="py-24 bg-white wood-pattern">
+        <div class="max-w-4xl mx-auto px-6 text-center mb-16 fade-in">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 serif text-green tracking-tight">3年学んでも、まだ「鑑定」に自信が持てない……。
+            </h2>
+            <div class="w-20 h-1 bg-orange mx-auto"></div>
+        </div>
+
+        <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-8">
+            <div class="bg-gray-50 p-8 rounded-3xl border border-gray-100 fade-in">
+                <ul class="space-y-6">
+                    <li class="flex items-start">
+                        <span class="text-orange mr-3 text-xl">✕</span>
+                        <p class="text-gray-700"><strong>キーワードの羅列：</strong> 「偏官だから行動力があります」といった定型文しか言えない</p>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-orange mr-3 text-xl">✕</span>
+                        <p class="text-gray-700"><strong>行動指針が出せない：</strong> 結局、相談者が明日から何をすればいいか伝えられない</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="bg-gray-50 p-8 rounded-3xl border border-gray-100 fade-in">
+                <ul class="space-y-6">
+                    <li class="flex items-start">
+                        <span class="text-orange mr-3 text-xl">✕</span>
+                        <p class="text-gray-700"><strong>手応えがない：</strong> 鑑定後に相談者の顔がパッと明るくなる感覚が持てない</p>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-orange mr-3 text-xl">✕</span>
+                        <p class="text-gray-700"><strong>軸がブレる：</strong> 流派ごとの解釈に迷い、自分の言葉に確信が持てない</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mt-16 text-center px-6 fade-in">
+            <p class="text-xl serif text-green italic">
+                「あなたは、能力が足りないのではありません。<br class="hidden md:block">
+                必要なのはさらなる暗記ではなく、<strong>見方の解像度</strong>を上げることなのです。」
+            </p>
+        </div>
+    </section>
+
+    <!-- 3. Solution Section -->
+    <section id="solution" class="py-24 bg-green text-white relative overflow-hidden">
+        <div class="absolute right-0 bottom-0 opacity-10">
+            <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#FFFFFF"
+                    d="M44.7,-76.4C58.1,-69.2,69.2,-58.1,76.4,-44.7C83.7,-31.3,87.1,-15.7,86.1,-0.6C85,14.5,79.5,29,72.3,42.4C65,55.8,56,68.1,43.9,76.2C31.8,84.4,15.9,88.4,0.4,87.7C-15.1,87,-30.2,81.6,-43.3,73.1C-56.4,64.6,-67.5,53.1,-75.4,39.6C-83.3,26.1,-88.1,10.5,-86.7,-4.8C-85.3,-20.1,-77.7,-35.1,-67.5,-47.4C-57.3,-59.7,-44.6,-69.3,-31.2,-76.5C-17.8,-83.7,-8.9,-88.4,4.4,-96.1C17.8,-103.8,31.3,-83.5,44.7,-76.4Z"
+                    transform="translate(100 100)" />
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6 serif">漢字の羅列を、景色に変える。</h2>
+                <p class="text-green-100 text-lg">「自然の摂理」で読み解く、全く新しい視点</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8 fade-in">
+                    <div class="bg-white/10 p-8 rounded-3xl backdrop-blur-sm border border-white/20">
+                        <h3 class="text-2xl font-bold mb-4 serif text-orange">「丁（ひのと）」は月、あるいは灯火</h3>
+                        <p class="leading-relaxed">
+                            夜空に浮かぶ孤独な月、あるいは暗闇を照らす一筋の光。その光を絶やさないために、今どんな「燃料」が必要か。それを読み解くのが自然派の視点です。
+                        </p>
+                    </div>
+                    <div class="bg-white/10 p-8 rounded-3xl backdrop-blur-sm border border-white/20">
+                        <h3 class="text-2xl font-bold mb-4 serif text-orange">「吉凶」ではなく「心地よさ」</h3>
+                        <p class="leading-relaxed">
+                            悪い時期だと怯えるのではなく、その時期を「どう過ごせば自然界のバランスが整うか」を提案します。だから、相談者は前向きに行動できるのです。
+                        </p>
+                    </div>
+                </div>
+                <div class="fade-in text-center">
+                    <div class="bg-white rounded-3xl p-4 shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&q=80&w=1200"
+                            alt="Beautiful Nature" class="rounded-2xl w-full h-80 object-cover">
+                        <div class="py-6">
+                            <p class="text-green font-bold serif text-xl italic">"命式は、人生の設計図ではなく風景画である"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Product Section -->
+    <section id="product" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 fade-in">
+                <div class="max-w-2xl">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 serif text-green">プロの思考プロセスを、<br>隠さず、すべて。</h2>
+                    <p class="text-gray-600">毎週土曜21時「実践鑑定ライブ」で学べる4つのポイント</p>
+                </div>
+                <div class="flex items-center space-x-2 text-orange font-bold">
+                    <span class="relative flex h-3 w-3">
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-orange"></span>
+                    </span>
+                    <span>LIVE STREAMING</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 fade-in">
+                <div
+                    class="p-8 bg-gray-50 rounded-3xl hover:bg-white hover:shadow-xl transition-all border border-gray-100 group">
+                    <div
+                        class="w-12 h-12 bg-green text-white rounded-2xl flex items-center justify-center mb-6 text-xl font-bold group-hover:bg-orange transition-colors">
+                        1</div>
+                    <h4 class="font-bold mb-3 serif text-lg text-green">描写力</h4>
+                    <p class="text-sm text-gray-600 leading-relaxed">命式から一瞬で「情景」を立ち上げるプロセス</p>
+                </div>
+                <div
+                    class="p-8 bg-gray-50 rounded-3xl hover:bg-white hover:shadow-xl transition-all border border-gray-100 group">
+                    <div
+                        class="w-12 h-12 bg-green text-white rounded-2xl flex items-center justify-center mb-6 text-xl font-bold group-hover:bg-orange transition-colors">
+                        2</div>
+                    <h4 class="font-bold mb-3 serif text-lg text-green">用神の選び方</h4>
+                    <p class="text-sm text-gray-600 leading-relaxed">複雑な命式から「解決の一文字」を見抜く手法</p>
+                </div>
+                <div
+                    class="p-8 bg-gray-50 rounded-3xl hover:bg-white hover:shadow-xl transition-all border border-gray-100 group">
+                    <div
+                        class="w-12 h-12 bg-green text-white rounded-2xl flex items-center justify-center mb-6 text-xl font-bold group-hover:bg-orange transition-colors">
+                        3</div>
+                    <h4 class="font-bold mb-3 serif text-lg text-green">伝え方</h4>
+                    <p class="text-sm text-gray-600 leading-relaxed">相談者の心にスッと届く、温度のある言葉選び</p>
+                </div>
+                <div
+                    class="p-8 bg-gray-50 rounded-3xl hover:bg-white hover:shadow-xl transition-all border border-gray-100 group">
+                    <div
+                        class="w-12 h-12 bg-green text-white rounded-2xl flex items-center justify-center mb-6 text-xl font-bold group-hover:bg-orange transition-colors">
+                        4</div>
+                    <h4 class="font-bold mb-3 serif text-lg text-green">バランス</h4>
+                    <p class="text-sm text-gray-600 leading-relaxed">五行の過不足を、現代の悩みに即してアドバイス</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Profile Section -->
+    <section id="profile" class="py-24 bg-gray-50 wood-pattern">
+        <div
+            class="max-w-5xl mx-auto px-6 bg-white rounded-[3rem] overflow-hidden shadow-2xl flex flex-col md:flex-row fade-in">
+            <div class="md:w-1/2 h-[500px] md:h-auto overflow-hidden">
+                <!-- ご指示：お送りいただいたてつ先生のお写真に差し替え -->
+                <!-- プレビュー環境用にフォールバック画像を追加 -->
+                <img src="IMG_3321.jpg" alt="てつ先生" class="w-full h-full object-cover">
+            </div>
+            <div class="md:w-1/2 p-10 md:p-16 flex flex-col justify-center">
+                <span class="text-orange font-bold mb-2 tracking-widest uppercase text-sm">鑑定士・ふちLABO.主宰</span>
+                <h2 class="text-5xl font-bold mb-8 serif text-green">てつ</h2>
+                <div class="space-y-6 text-gray-600 leading-relaxed mb-10">
+                    <p class="font-bold text-lg text-green">「3年で500人の自然派鑑定士を育成し、日本の気の流れを良くしたい」</p>
+                    <p>
+                        暗記中心の四柱推夢に限界を感じ、自然の摂理に基づく鑑定法を確立。これまでに3,000人以上の人生に伴走。
+                        ただ当てるだけでなく、相談者が「自分を愛せるようになる」鑑定スタイルを提唱。
+                    </p>
+                </div>
+                <div class="border-t border-gray-100 pt-8">
+                    <p class="serif text-xl text-green font-bold italic">あなたも、その景色を一緒に作る仲間になりませんか？</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Closing & CTA -->
+    <section id="cta" class="py-24 bg-white text-center">
+        <div class="max-w-4xl mx-auto px-6 fade-in">
+            <h2 class="text-4xl font-bold mb-8 serif text-green">四柱推命の楽しさを、取り戻そう。</h2>
+            <p class="text-lg text-gray-600 mb-12 leading-relaxed">
+                他流派の方も大歓迎です。あなたが積み上げてきた知識に「風景」を重ねるだけで、<br class="hidden md:block">
+                鑑定は驚くほど鮮やかに、そして温かくなります。
+            </p>
+
+            <div class="inline-block p-1 bg-gradient-to-r from-orange to-yellow-500 rounded-2xl shadow-2xl mb-8">
+                <a href="#"
+                    class="block bg-white px-12 py-6 rounded-xl hover:bg-orange hover:text-white transition-all group">
+                    <p class="text-gray-500 text-sm mb-1 group-hover:text-white/80">YouTubeで最新の配信をチェック</p>
+                    <p
+                        class="text-2xl font-bold serif flex items-center justify-center text-green group-hover:text-white">
+                        <svg class="w-6 h-6 mr-3 fill-red-600 group-hover:fill-white transition-colors"
+                            viewBox="0 0 24 24">
+                            <path
+                                d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
+                        </svg>
+                        実践鑑定ライブに参加する
+                    </p>
+                </a>
+            </div>
+
+            <div class="flex justify-center space-x-8 mt-8">
+                <a href="#"
+                    class="text-gray-400 hover:text-orange transition font-bold border-b-2 border-transparent hover:border-orange py-1">Instagram</a>
+                <a href="#"
+                    class="text-gray-400 hover:text-orange transition font-bold border-b-2 border-transparent hover:border-orange py-1">Official
+                    Site</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-gray-100 bg-white">
+        <div class="max-w-7xl mx-auto px-6 text-center text-gray-400 text-sm">
+            <p class="serif text-green text-xl mb-4 font-bold">ふちLABO.</p>
+            <p>&copy; 2024 Fuchi Labo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
